@@ -61,21 +61,19 @@ main {
 
   .main {
     &__container {
-      display: none;
+      // display: none;
       justify-content: center;
       align-items: center;
+      width: 100%;
     }
 
     &__lists {
-      display: flex;
-      justify-content: center;
-      gap: 80px;
+      column-count: 1;
+      column-gap: 60px;
       margin-top: 28px;
     }
 
     &__list {
-      min-width: 560px;
-
       .main__listDesc {
         display: none;
       }
@@ -97,8 +95,8 @@ main {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 3.67px 20px 6px;
-      margin-top: 32px;
+      padding: 32px 3.67px 20px 6px;
+      // margin-top: 32px;
       border-bottom: 3px solid #3f3f3f;
     }
 
@@ -175,13 +173,13 @@ footer {
 
   main {
     .main {
-      &__container {
-        display: block;
-      }
+      // &__container {
+      //   display: block;
+      // }
 
-      &__SP {
-        display: none;
-      }
+      // &__SP {
+      //   display: none;
+      // }
     }
   }
 }
@@ -190,6 +188,18 @@ footer {
 @media screen and (min-width: 1024px) {
   header {
     padding: 55.8px 30px 0;
+  }
+
+  main {
+    .main {
+      &__lists {
+        column-count: 2;
+      }
+
+      &__list {
+        max-width: 560px;
+      }
+    }
   }
 }
 
